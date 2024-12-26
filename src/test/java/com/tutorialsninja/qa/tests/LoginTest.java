@@ -40,6 +40,7 @@ public class LoginTest extends Base {
 	
 	@Test(priority=1, dataProvider="validCreds")
 	public void loginWithValidCreds(String email, String password) throws InterruptedException {
+		System.out.println("Login test");
 		loginPage.login(email, password);
 		Thread.sleep(10);
 		AccountPage accountPage = new AccountPage(driver);
